@@ -26,3 +26,7 @@ RUN apt-get update \
 
 RUN python3 -m pip install setuptools
 RUN python3 -m pip install radian
+RUN python3 -m pip install jupyterlab
+
+COPY packages.json install_packages.R ./settings/
+RUN Rscript ./settings/install_packages.R
