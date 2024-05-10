@@ -28,6 +28,5 @@ RUN python3 -m pip install setuptools
 RUN python3 -m pip install radian
 RUN python3 -m pip install jupyterlab
 
-COPY packages.json install_packages.R install_notebook_lib.R ./settings/
-RUN Rscript ./settings/install_packages.R
-RUN Rscript ./settings/install_notebook_lib.R
+COPY packages.json install_packages.R register_kernel.R ./settings/
+RUN Rscript ./settings/register_kernel.R
