@@ -30,5 +30,3 @@ RUN python3 -m pip install jupyterlab
 
 RUN install2.r --error IRkernel
 
-Run R -e IRkernel::installspec(user = TRUE)
-
