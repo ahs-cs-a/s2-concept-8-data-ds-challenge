@@ -28,5 +28,6 @@ RUN python3 -m pip install setuptools
 RUN python3 -m pip install radian
 RUN python3 -m pip install jupyterlab
 
-RUN install2.r --error IRkernel
+RUN R -e "install.packages('IRkernel',dependencies=TRUE, repos='http://cran.rstudio.com/')"
+
 
