@@ -28,9 +28,7 @@ RUN python3 -m pip install setuptools
 RUN python3 -m pip install radian
 RUN python3 -m pip install jupyterlab
 
-RUN install2.r --error \
-    IRkernel \
-    coursekata/coursekata-r
+RUN install2.r --error IRkernel
 
 Run R -e IRkernel::installspec(user = TRUE)
-Run R -e coursekata::coursekata_install()
+
